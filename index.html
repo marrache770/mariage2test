@@ -11,22 +11,28 @@
 </head>
 <body>
 
-  <!-- SPLASH SCREEN -->
+  <!-- SPLASH SCREEN — two halves that split with content -->
   <div class="splash" id="splash">
-    <div class="splash-frame"></div>
-    <div class="splash-content">
-      <p class="splash-bsd">בס״ד</p>
-      <div class="splash-monogram">
-        <span>É</span>
-        <span class="splash-dot"></span>
-        <span>T</span>
+    <div class="splash-half splash-half--top">
+      <div class="splash-inner">
+        <div class="splash-frame"></div>
+        <p class="splash-bsd">בס״ד</p>
+        <div class="splash-monogram"><span>É</span><span class="splash-dot"></span><span>T</span></div>
+        <p class="splash-tagline">Nous avons le plaisir de vous inviter<br>à célébrer notre mariage</p>
+        <button class="splash-btn" id="splashEnter"><span>Ouvrir l'invitation</span></button>
+        <p class="splash-date">21 . 06 . 2026</p>
       </div>
-      <p class="splash-tagline">Nous avons le plaisir de vous inviter<br>à célébrer notre mariage</p>
-      <button class="splash-btn" id="splashEnter">
-        <span>Ouvrir l'invitation</span>
-      </button>
     </div>
-    <p class="splash-date">21 . 06 . 2026</p>
+    <div class="splash-half splash-half--bot">
+      <div class="splash-inner">
+        <div class="splash-frame"></div>
+        <p class="splash-bsd">בס״ד</p>
+        <div class="splash-monogram"><span>É</span><span class="splash-dot"></span><span>T</span></div>
+        <p class="splash-tagline">Nous avons le plaisir de vous inviter<br>à célébrer notre mariage</p>
+        <button class="splash-btn splash-btn--ghost" aria-hidden="true" tabindex="-1"><span>Ouvrir l'invitation</span></button>
+        <p class="splash-date">21 . 06 . 2026</p>
+      </div>
+    </div>
   </div>
 
   <div class="grain" aria-hidden="true"></div>
@@ -141,6 +147,7 @@
             <div class="gallery-item gi-2 reveal-up delay-2"><div class="gi-inner"><span class="gi-num">2</span></div></div>
             <div class="gallery-item gi-3 reveal-up delay-2"><div class="gi-inner"><span class="gi-num">3</span></div></div>
             <div class="gallery-item gi-4 reveal-up delay-3"><div class="gi-inner"><span class="gi-num">4</span></div></div>
+            <div class="gallery-item gi-5 reveal-up delay-3"><div class="gi-inner"><span class="gi-num">5</span></div></div>
           </div>
         </div>
       </section>
