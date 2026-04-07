@@ -41,7 +41,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  html, body { overflow: auto; height: auto; }
+  html, body { overflow: hidden; height: 100%; }
 }
 
 ::selection { background: var(--accent-lt); color: var(--text); }
@@ -991,6 +991,8 @@ body {
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
     height: 100dvh;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
   }
 
   .scroll-track {
@@ -1002,8 +1004,9 @@ body {
   .panel {
     min-width: 100%;
     min-height: 100dvh;
+    height: auto;
     scroll-snap-align: start;
-    overflow-y: auto;
+    overflow: visible;
   }
 
   .panel-inner { padding: 2.5rem 1.25rem 4rem; }

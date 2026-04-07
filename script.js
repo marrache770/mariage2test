@@ -4,8 +4,10 @@
   const TOTAL_PANELS = 5;
 
   const scrollTrack   = document.getElementById('scrollTrack');
+  const scrollRoot    = document.querySelector('.horizontal-scroll');
   const progressFill  = document.getElementById('progressFill');
   const navDots       = document.querySelectorAll('.dot');
+  const panels        = Array.from(document.querySelectorAll('.panel'));
   const musicToggle   = document.getElementById('musicToggle');
   const bgMusic       = document.getElementById('bgMusic');
   const rsvpForm      = document.getElementById('rsvpForm');
@@ -128,10 +130,19 @@
 
   /* ---- Mobile scroll sync ---- */
   function handleMobileScroll() {
-    if (!isMobile) return;
-    const st = document.querySelector('.horizontal-scroll').scrollTop;
-    const h  = window.innerHeight;
-    const ni = Math.round(st / h);
+    if (!isMobile || !scrollRoot) return;
+    const st = scrollRoot.scrollTop;
+
+    let ni = currentIndex;
+    let bestDistance = Number.POSITIVE_INFINITY;
+    panels.forEach((panel, index) => {
+      const dist = Math.abs(panel.offsetTop - st);
+      if (dist < bestDistance) {
+        bestDistance = dist;
+        ni = index;
+      }
+    });
+
     if (ni !== currentIndex && ni >= 0 && ni < TOTAL_PANELS) {
       currentIndex = ni;
       updateUI();
@@ -177,7 +188,7 @@
         } else {
           scrollTrack.style.transform = 'none';
           const p = document.querySelector(`.panel[data-index="${currentIndex}"]`);
-          if (p) p.scrollIntoView();
+          if (p && scrollRoot) scrollRoot.scrollTo({ top: p.offsetTop, behavior: 'auto' });
         }
       }
     }, 150);
@@ -210,7 +221,8 @@
 
   /* ---- Init ---- */
   function init() {
-    const sc = document.querySelector('.horizontal-scroll');
+    const sc = scrollRoot;
+    if (!sc) return;
     sc.addEventListener('wheel',      handleWheel,      { passive: false });
     sc.addEventListener('touchstart', handleTouchStart,  { passive: true });
     sc.addEventListener('touchend',   handleTouchEnd,    { passive: true });
