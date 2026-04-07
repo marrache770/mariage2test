@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Élise & Thomas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500&family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div class="splash" id="splash">
+    <div class="splash-frame"></div>
+    <div class="splash-content">
+      <p class="splash-bsd">בס״ד</p>
+      <div class="splash-monogram">
+        <span>É</span>
+        <span class="splash-dot"></span>
+        <span>T</span>
+      </div>
+      <p class="splash-tagline">Nous avons le plaisir de vous inviter<br>à célébrer notre mariage</p>
+      <button class="splash-btn" id="splashEnter">
+        <span>Ouvrir l'invitation</span>
+      </button>
+    </div>
+    <p class="splash-date">21 . 06 . 2026</p>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Musique">
+    <svg class="music-icon music-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg>
+    <svg class="music-icon music-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+      <line x1="1" y1="1" x2="23" y2="23" stroke-width="2"/>
+    </svg>
+    <div class="eq-bars"><span></span><span></span><span></span><span></span></div>
+  </button>
+
+  <nav class="nav-dots" id="navDots">
+    <button class="dot active" data-index="0"></button>
+    <button class="dot" data-index="1"></button>
+    <button class="dot" data-index="2"></button>
+    <button class="dot" data-index="3"></button>
+    <button class="dot" data-index="4"></button>
+  </nav>
+
+  <div class="horizontal-scroll" id="horizontalScroll">
+    <div class="scroll-track" id="scrollTrack">
+
+      <!-- 1. HERO -->
+      <section class="panel panel-hero" data-index="0">
+        <div class="hero-corner hero-corner--tl"></div>
+        <div class="hero-corner hero-corner--tr"></div>
+        <div class="hero-corner hero-corner--bl"></div>
+        <div class="hero-corner hero-corner--br"></div>
+        <div class="hero-diamond hero-diamond--top"></div>
+        <div class="hero-diamond hero-diamond--bottom"></div>
+        <div class="hero-diamond hero-diamond--left"></div>
+        <div class="hero-diamond hero-diamond--right"></div>
+        <div class="panel-inner">
+          <div class="hero-content">
+            <p class="hero-bsd reveal-up">בס״ד</p>
+            <div class="hero-names reveal-up delay-1">
+              <div class="hero-name-block">
+                <span class="hero-name">Élise</span>
+                <span class="hero-name-heb">אליז</span>
+              </div>
+              <span class="hero-amp">&</span>
+              <div class="hero-name-block">
+                <span class="hero-name">Thomas</span>
+                <span class="hero-name-heb">תומא</span>
+              </div>
+            </div>
+            <div class="hero-line reveal-up delay-2"></div>
+            <p class="hero-quote-heb reveal-up delay-3">אֲנִי לְדוֹדִי וְדוֹדִי לִי</p>
+            <p class="hero-quote-fr reveal-up delay-3">Je suis à mon bien-aimé et mon bien-aimé est à moi</p>
+            <p class="hero-date reveal-up delay-4">21 Juin 2026 — Paris</p>
+            <p class="hero-date-heb reveal-up delay-4">כ״ה סיון תשפ״ו</p>
+            <div class="scroll-hint reveal-up delay-4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. DATE & LIEU — asymmetric 55/45 -->
+      <section class="panel panel-info" data-index="1">
+        <div class="panel-inner">
+          <div class="info-layout">
+            <div class="info-col info-col--date">
+              <span class="tag reveal-up">La Date</span>
+              <h2 class="col-title reveal-up delay-1">Dimanche<br>21 Juin 2026</h2>
+              <p class="col-hebrew reveal-up delay-2">כ״ה סיון תשפ״ו</p>
+              <div class="col-schedule reveal-up delay-3">
+                <div class="sched-row">
+                  <span class="sched-label">Houppa</span>
+                  <span class="sched-time">17 h 00</span>
+                </div>
+                <div class="sched-row">
+                  <span class="sched-label">Cocktail</span>
+                  <span class="sched-time">18 h 30</span>
+                </div>
+                <div class="sched-row">
+                  <span class="sched-label">Diner & Soiree</span>
+                  <span class="sched-time">20 h 00</span>
+                </div>
+              </div>
+            </div>
+            <div class="info-col info-col--venue">
+              <span class="tag reveal-up">Le Lieu</span>
+              <h2 class="col-title reveal-up delay-1">Chateau de<br>Fontainebleau</h2>
+              <p class="col-address reveal-up delay-2">77300 Fontainebleau, France</p>
+              <div class="col-map reveal-up delay-3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.5!2d2.6987!3d48.4009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5f3c5e4d6e7a9%3A0x1234567890abcdef!2sCh%C3%A2teau%20de%20Fontainebleau!5e0!3m2!1sfr!2sfr!4v1234567890"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. GALERIE — masonry-ish -->
+      <section class="panel panel-gallery" data-index="2">
+        <div class="panel-inner">
+          <div class="gallery-header">
+            <span class="tag reveal-up">Nos Moments</span>
+            <h2 class="section-title reveal-up delay-1">Galerie</h2>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item gi-1 reveal-up delay-1"><div class="gi-inner"><span class="gi-num">1</span></div></div>
+            <div class="gallery-item gi-2 reveal-up delay-2"><div class="gi-inner"><span class="gi-num">2</span></div></div>
+            <div class="gallery-item gi-3 reveal-up delay-2"><div class="gi-inner"><span class="gi-num">3</span></div></div>
+            <div class="gallery-item gi-4 reveal-up delay-3"><div class="gi-inner"><span class="gi-num">4</span></div></div>
+            <div class="gallery-item gi-5 reveal-up delay-3"><div class="gi-inner"><span class="gi-num">5</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. PROGRAMME — minimal timeline -->
+      <section class="panel panel-programme" data-index="3">
+        <div class="panel-inner">
+          <div class="prog-layout">
+            <div class="prog-header">
+              <span class="tag reveal-up">Le Deroule</span>
+              <h2 class="section-title reveal-up delay-1">Programme</h2>
+            </div>
+            <div class="timeline">
+              <div class="tl-row reveal-up delay-1">
+                <span class="tl-time">16 h 30</span>
+                <span class="tl-dot"></span>
+                <div class="tl-text"><strong>Accueil des invites</strong><span>Arrivee au Chateau, jardins</span></div>
+              </div>
+              <div class="tl-row reveal-up delay-2">
+                <span class="tl-time">17 h 00</span>
+                <span class="tl-dot"></span>
+                <div class="tl-text"><strong>Houppa</strong><span>Ketouba, Kidoush, Sept Benedictions</span></div>
+              </div>
+              <div class="tl-row reveal-up delay-2">
+                <span class="tl-time">18 h 00</span>
+                <span class="tl-dot"></span>
+                <div class="tl-text"><strong>Bris du verre</strong><span>Mazal Tov — debut de la celebration</span></div>
+              </div>
+              <div class="tl-row reveal-up delay-3">
+                <span class="tl-time">18 h 30</span>
+                <span class="tl-dot"></span>
+                <div class="tl-text"><strong>Cocktail</strong><span>Aperitif casher, terrasse</span></div>
+              </div>
+              <div class="tl-row reveal-up delay-3">
+                <span class="tl-time">20 h 00</span>
+                <span class="tl-dot"></span>
+                <div class="tl-text"><strong>Diner</strong><span>Menu casher gastronomique</span></div>
+              </div>
+              <div class="tl-row reveal-up delay-4">
+                <span class="tl-time">22 h 30</span>
+                <span class="tl-dot"></span>
+                <div class="tl-text"><strong>Soiree dansante</strong><span>Musique, danses & Hora</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. RSVP — labels above inputs -->
+      <section class="panel panel-rsvp" data-index="4">
+        <div class="panel-inner">
+          <div class="rsvp-layout">
+            <div class="rsvp-header">
+              <span class="tag reveal-up">Confirmez votre presence</span>
+              <h2 class="section-title reveal-up delay-1">RSVP</h2>
+              <p class="rsvp-sub reveal-up delay-2">Merci de confirmer avant le 15 mai 2026</p>
+            </div>
+            <form class="rsvp-form" id="rsvpForm">
+              <div class="field-row reveal-up delay-2">
+                <div class="field">
+                  <label for="firstName">Prenom</label>
+                  <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="field">
+                  <label for="lastName">Nom</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                </div>
+              </div>
+              <div class="field reveal-up delay-3">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="field reveal-up delay-3">
+                <label for="guests">Nombre d'invites</label>
+                <select id="guests" name="guests" required>
+                  <option value="" disabled selected>Choisir</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="reveal-up delay-4">
+                <button type="submit" class="btn-submit">
+                  <span>Confirmer</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </form>
+            <div class="rsvp-success" id="rsvpSuccess">
+              <div class="success-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <h3>Merci</h3>
+              <p>Nous avons hate de celebrer avec vous.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+  <audio id="bgMusic" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
