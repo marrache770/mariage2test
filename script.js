@@ -8,6 +8,7 @@
   const progressFill  = document.getElementById('progressFill');
   const navDots       = document.querySelectorAll('.dot');
   const panels        = Array.from(document.querySelectorAll('.panel'));
+  const themeMeta     = document.querySelector('meta[name="theme-color"]');
   const musicToggle   = document.getElementById('musicToggle');
   const bgMusic       = document.getElementById('bgMusic');
   const rsvpForm      = document.getElementById('rsvpForm');
@@ -46,8 +47,16 @@
     const panel  = document.querySelector(`.panel[data-index="${currentIndex}"]`);
     const isDark = panel && panel.classList.contains('panel-programme');
     document.body.classList.toggle('dark-section', isDark);
+    syncViewportChrome(panel);
 
     triggerReveal(currentIndex);
+  }
+
+  function syncViewportChrome(panel) {
+    if (!panel) return;
+    const bg = getComputedStyle(panel).backgroundColor || '#faf9f7';
+    document.documentElement.style.setProperty('--viewport-bg', bg);
+    if (themeMeta) themeMeta.setAttribute('content', bg);
   }
 
   /* ---- Parallax depth on panel content ---- */
