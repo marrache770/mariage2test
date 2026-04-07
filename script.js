@@ -183,11 +183,19 @@
     }, 150);
   });
 
-  /* ---- Splash screen ---- */
+  /* ---- Splash screen — rideau papier ---- */
   const splash = document.getElementById('splash');
-  const splashEnter = document.getElementById('splashEnter');
 
-  splashEnter.addEventListener('click', () => {
+  const topFace = splash.querySelector('.curtain-top .curtain-face');
+  const bottomFace = splash.querySelector('.curtain-bottom .curtain-face');
+  if (topFace && bottomFace) {
+    bottomFace.innerHTML = topFace.innerHTML;
+    bottomFace.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+  }
+
+  splash.addEventListener('click', (e) => {
+    if (!e.target.closest('.splash-btn')) return;
+
     bgMusic.volume = 0.25;
     bgMusic.play().catch(() => {});
     playing = true;
@@ -197,7 +205,7 @@
 
     setTimeout(() => {
       splash.classList.add('gone');
-    }, 1200);
+    }, 1500);
   });
 
   /* ---- Init ---- */
