@@ -1,0 +1,10 @@
+{
+  "name": "Elise & Thomas",
+  "short_name": "Mariage",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf9f7",
+  "theme_color": "#faf9f7"
+}
