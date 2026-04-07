@@ -65,6 +65,26 @@ body {
 
 .splash.gone { display: none; }
 
+/* Force une teinte cohérente aux zones chrome iOS */
+.viewport-chrome-tint {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background: var(--viewport-bg);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.viewport-chrome-tint--top {
+  top: 0;
+  height: max(1px, var(--safe-top));
+}
+
+.viewport-chrome-tint--bottom {
+  bottom: 0;
+  height: max(1px, var(--safe-bottom));
+}
+
 /* --- Les deux moitiés du rideau --- */
 .curtain {
   position: absolute;

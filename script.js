@@ -239,7 +239,7 @@
 
     if (isMobile) sc.addEventListener('scroll', handleMobileScroll, { passive: true });
 
-    triggerReveal(0);
+    updateUI();
   }
 
   document.readyState === 'loading'
